@@ -547,7 +547,7 @@
       const funnel=[surgi.nbStartQ, surgi.conversionsQ, surgi.nbStartQ-surgi.conversionsQ];
       new Chart(document.getElementById('spotlight'),{
         type:'bar',
-        data:{labels:['NB at Q start','Converted this Q','Remaining'],
+        data:{labels:['Non-borrowers at Quarter start','Converted this Quarter','Remaining'],
           datasets:[{label:'Count',data:funnel,backgroundColor:['#fb8c00','#2e7d32','#c62828']}]},
         options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${c.raw} members`},footer:()=>`Surgi YoY: +${yoy}%`}},scales:{y:{beginAtZero:true}}},
         plugins:[valueLabel]
